@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Student List{% endblock %}
+
+{% block content %}
+{% for student in students %}
+<p>{{ student.student_id}} | {{ student.student_name}} | {{ student.birth_day|date:"d-m-Y"}} | {{ student.grade}} | {{ student.program}}</p>
+
+{% endfor %}
+{% endblock %}
